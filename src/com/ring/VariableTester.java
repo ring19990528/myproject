@@ -26,6 +26,20 @@ public class VariableTester {
 		System.out.println("len:"+len);
 		System.out.println(s.charAt(0));
 		 
+		float f = 11.0f;
+		int x = 12;
+		int y = 5;
+		float z = f / y;
+		System.out.println(z);
+		System.out.println(x <=3 || x >=5);
+		System.out.println(x >> 2);
+		System.out.println(x <<99);
+		x = x + 1;
+		//x++;
+		
+		System.out.println(x);
+		
+		
 		
 	}
 }
