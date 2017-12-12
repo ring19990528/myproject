@@ -5,19 +5,25 @@ public class Student {
 	int math;
 	int chinese;
 	String name;
-	
-	public Student(String n,int e,int c,int m){
-		english = e;
-		math = m;
-		chinese = c;
-		name = n;
-		
+
+	// 屬性 instance variable
+	public Student(String name, int english, int chinese, int math) {
+		this.english = english;
+		this.math = math;
+		this.chinese = chinese;
+		this.name = name;
+		// 區域變數local variable
 	}
-	public void print(){
-		System.out.println(english + "\t"
-				+ math + "\t" + chinese);
+
+	public Student(String name) {
+		this.name = name;
 	}
-	public int getAverage(){
-		return (english + math + chinese)/3;
+
+	public void print() {
+		System.out.println(english + "\t" + math + "\t" + chinese);
+	}
+
+	public int getAverage() {
+		return (english + math + chinese) / 3;
 	}
 }
