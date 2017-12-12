@@ -12,7 +12,9 @@ public class Gametester {
 		int col = 5;
 		// col = column
 		int hp = 100;
+		System.out.println("目前位置:"+pos+" "+"HP:"+hp);
 		while (n != 0) {
+			
 			System.out.println("請使用者輸入以下任一數字(8、2、4、6、0):");
 			Scanner scanner = new Scanner(System.in);
 			String line = scanner.nextLine();
@@ -23,10 +25,12 @@ public class Gametester {
 				if (pos / col < row - 1) {
 					// 向下
 					pos = pos + col;
-					System.out.println(hp = hp - 5);
+					System.out.print("目前位置:"+pos+" ");
+					System.out.println("HP:"+(hp = hp - 5));
 
 				} else {
-					System.out.println(hp = hp - 30);
+					System.out.print("目前位置:"+pos+" ");
+					System.out.println("HP:"+(hp = hp - 30));
 				}
 
 				break;
@@ -34,19 +38,23 @@ public class Gametester {
 				if (pos / col != 0) {
 					// 向左
 					pos = pos - 1;
-					System.out.println(hp = hp - 5);
+					System.out.print("目前位置:"+pos+" ");
+					System.out.println("HP:"+(hp = hp - 5));
 
 				} else {
-					System.out.println(hp = hp - 30);
+					System.out.print("目前位置:"+pos+" ");
+					System.out.println("HP:"+(hp = hp - 30));
 				}
 
 				break;
 			case 6:
 				if (pos % col != col - 1) {
 					pos = pos + 1;
-					System.out.println(hp = hp - 5);
+					System.out.print("目前位置:"+pos+" ");
+					System.out.println("HP:"+(hp = hp - 5));
 				}else {
-					System.out.println(hp = hp - 30);
+					System.out.print("目前位置:"+pos+" ");
+					System.out.println("HP:"+(hp = hp - 30));
 				}
 
 				break;
@@ -54,10 +62,12 @@ public class Gametester {
 				if (pos / col < 0) {
 					// 向上
 					pos = pos - col;
-					System.out.println(hp = hp - 5);
+					System.out.print("目前位置:"+pos);
+					System.out.println("HP:"+(hp = hp - 5));
 
 				} else {
-					System.out.println(hp = hp - 30);
+					System.out.print("目前位置:"+pos);
+					System.out.println("HP:"+(hp = hp - 30));
 				}
 
 				break;
