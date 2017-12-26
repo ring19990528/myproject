@@ -8,9 +8,12 @@ public class Tester {
 		// stu.english = 55;
 		// stu.math = 90;
 		// stu.chinese = 66;
+		stu.println();
 		stu.print();
 		int avg = stu.getAverage();
 		System.out.println(stu.name + ":" + avg);
+		GraduateStudent gstu = new GraduateStudent();
+		gstu.print();
 	}
 
 }
