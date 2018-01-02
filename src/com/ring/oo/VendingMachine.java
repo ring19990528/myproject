@@ -9,7 +9,7 @@ public class VendingMachine {
 		Drink d2 = new Drink("b", 20);
 		Drink d3 = new Drink("c", 30);
 		int sum = 0;
-		Scanner scanner = new S 
+		Scanner scanner = new Scanner(System.in);
 	}
 
 }

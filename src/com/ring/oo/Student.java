@@ -2,14 +2,16 @@ package com.ring.oo;
 
 public class Student {
 	int english;
-	int math;
-	int chinese;
+	//加上private只有student才能用
+	protected int math;
+	//加上protected不同package也能使用繼承此類別的也能使用
+ 	int chinese;
 	String name;
 	static int pass = 60;
 	// 屬性 instance variable(Field)
 	// static 類別層級的變數XX
 	// static 只取static層級的用 instance v不能一起用
-
+	// public 可以供所有package使用 沒有public只能給同一個package使用
 	public Student() {
 	// 空的建構子才可以繼承(extends)
 	}
