@@ -4,16 +4,20 @@ public class Bubblesort {
 
 	public static void main(String[] args) {
 		int n[] = { 51, 23, 6, 65, 15 };
-		for (int i = 0; i <= 3; i = i + 1) {
+		for (int i = 0; i < n.length-1; i = i + 1) {
 			for (int j = i + 1; j < n.length; j = j + 1) {
-				if (n[i] > n[i + 1]) {
+				
+				if (n[i] > n[j]) {
 					int tmp = n[i];
-					n[i] = n[i + 1];
-					n[i + 1] = tmp;
-					System.out.print(n[i + 1]);
+					n[i] = n[j];
+					n[j] = tmp;
+	
 				}
 				
 			}
+		}
+		for(int num : n) {
+			System.out.print(num + " ");
 		}
 	}
 }
