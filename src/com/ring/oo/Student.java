@@ -4,7 +4,7 @@ public class Student {
 	int english;
 	//加上private只有student才能用
 	protected int math;
-	//加上protected不同package也能使用繼承此類別的也能使用
+	//加上protected不同package繼承此類別的也能使用
  	int chinese;
 	String name;
 	static int pass = 60;
