@@ -9,14 +9,14 @@ public class Food {
 	
 	public Food(int strawberry,int peach,int apple){
 		this.strawberry = strawberry;
-		this.peach = 
+		this.peach = peach;
 	}
 	public Food(int price){
 		this.price = price;
 		
 	}
 	public void print(){
-		System.out.print();
+		System.out.println();
 	}
 	public int total() {
 		return(strawberry + peach + apple);
