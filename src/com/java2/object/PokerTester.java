@@ -20,7 +20,7 @@ public class PokerTester {
 		}
 		for(int i = 0;i<cards.length;i++){
 			int c = cards[i];
-			System.out.println((c%13)+1+""+(flowers.charAt(c/13)));
+			System.out.print((c%13)+1+""+(flowers.charAt(c/13))+" ");
 		}
 	}
 
