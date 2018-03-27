@@ -9,7 +9,7 @@ public class Poker2 {
 	String flowers = "♠♥♦♣";
 
 	public Poker2() {
-		for (int i = 0; i < 53; i++) {
+		for (int i = 0; i < 52; i++) {
 			cards.add(i+1);
 		}
 	}
