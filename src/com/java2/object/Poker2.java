@@ -17,7 +17,7 @@ public class Poker2 {
 	public void shuffle2() {
 		for (int i = 0; i < cards.size(); i++) {
 			int r = random.nextInt(52);
-			cards.set(i, r);
+			cards.set(cards.get(r), i);
 		}
 	}
 	public void show2(){
