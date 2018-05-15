@@ -1,6 +1,12 @@
 package com.java2.threading;
 
 public class Horse extends Thread{
+	
+	
+	
+	
+	
+	
 	@Override
 	public void run(){
 		for(int i = 0; i <= 100 ; i++){
