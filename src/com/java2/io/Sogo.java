@@ -9,6 +9,8 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.PrintStream;
 import java.nio.channels.ShutdownChannelGroupException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 import com.java2.object.Customer;
@@ -32,6 +34,7 @@ public class Sogo {
 				inputSales();
 				break;
 			case 2:
+				List<Sales> list = new ArrayList<>();
 				try {
 					FileInputStream fis = new FileInputStream("sales.txt");
 					InputStreamReader isr = new InputStreamReader(fis);

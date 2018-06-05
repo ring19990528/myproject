@@ -65,7 +65,7 @@ public class Tester1 {
 //		 for(String name: nameSet){
 //			 System.out.print(name);			 
 //		 }
-		Set<Integer> set = new HashSet<>(Arrays.asList("6" , "postgres" , "sqlite" , "oracle" ,"mongodb","postgres","mssql"));
+		//Set<Integer> set = new HashSet<>(Arrays.asList("6" , "postgres" , "sqlite" , "oracle" ,"mongodb","postgres","mssql"));
 		
 		
 		
