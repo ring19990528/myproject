@@ -17,13 +17,14 @@ public class VendingMain {
 			BufferedReader in = new BufferedReader(fr);
 			String line = in.readLine();
 			String tokens[] = line.split(",");
-			for(int i = 0 ; i < count ; i++){
-				String name = tokens[i*2+2];
-				int price = Integer.parseInt(tokens[i*2+2]);
-				vm.drinks.add(new Drink(i+1,name,price));
+			int count = Integer.parseInt(tokens[0]);
+			for (int i = 0; i < count; i++) {
+				String name = tokens[i * 2 + 1];
+				int price = Integer.parseInt(tokens[i * 2 + 2]);
+				vm.drinks.add(new Drink(i + 1, name, price));
 			}
 			vm.on();
-			
+
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -31,7 +32,7 @@ public class VendingMain {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
 	}
 
 }
