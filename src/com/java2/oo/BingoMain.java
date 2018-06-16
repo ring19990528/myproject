@@ -47,31 +47,47 @@ public class BingoMain {
 			if (i % 5 == 4) {
 				System.out.println();
 			}
-
+			
 		}
 	}
-	public void bingo() {
-		for(int j = 0;j<25;j++) {
-		int b = numbers.get(j);
-				
-		}
-	}
+	
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
 		try {
 			FileReader fr = new FileReader("bingo.txt");
 			BufferedReader in = new BufferedReader(fr);
 			String line = in.readLine();
 			String tokens[] = line.split(",");
-			int a = Integer.parseInt(tokens[0]);
-			for (int i = 0; i < a; i++) {
-				int num = Integer.parseInt(tokens[i]);
-			}
+			
 			BingoMain bm = new BingoMain(25);
 			bm.print();
-		
-
+			for (int i = 0; i < 25; i++) {
+				int num = Integer.parseInt(tokens[i]);
+				for(int j = 0;j<25;j++) {
+				if(bm.numbers.get(j) == num) {
+				int b = 0;
+				int temp = bm.numbers.get(j);
+				temp= b;
+				}
+				}
+				for(int n : bm.numbers) {
+					if (n < 10) {
+						System.out.print(" ");
+					}
+					System.out.print(n < 10 ? " " : " ");
+					System.out.print(n);
+					if (i % 5 == 4) {
+						System.out.println();
+					}
+				}
+			}
+			
+			
+			
+			
+			
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

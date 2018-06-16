@@ -1,6 +1,7 @@
 package com.java2.io;
 
 import java.io.BufferedReader;
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -13,7 +14,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import com.java2.object.Customer;
+import com.ring.sogo.Customer;
+import com.ring.sogo.GoldenCustomer;
+import com.ring.sogo.SilverCustomer;
+
+
 
 public class Sogo {
 	Scanner scanner = new Scanner(System.in);
@@ -76,7 +81,7 @@ public class Sogo {
 						break;
 		
 					}
-					customer.print()
+					customer.print();
 				}
 
 			case 3:
