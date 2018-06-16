@@ -1,4 +1,4 @@
-package java2.schedule;
+package com.java2.schedule;
 
 //有一文字檔儲存了課表資料(schedule.txt)
 //請讀取資料後，設計程式可檢查是否有空檔?
