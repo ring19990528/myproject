@@ -79,6 +79,7 @@ public class Sogo {
 					case 3:
 						customer = new GoldenCustomer(sales.getAmount());
 						break;
+
 		
 					}
 					customer.print();
