@@ -4,6 +4,8 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 //有一文字檔儲存了課表資料(schedule.txt)
@@ -31,23 +33,43 @@ public class Main {
 				int day = scanner.nextInt();
 				System.out.println("請輸入時(0~24):");
 				int time = scanner.nextInt();
+				
 		try {
 			FileReader fr = new FileReader("schedule.txt");
 			BufferedReader in = new BufferedReader(fr);
 			String line = in.readLine();
-			
-				String[] tokens = line.split(",");
+				String[] token1 = line.split(",");
+				List<String> list1 = new ArrayList<>();
+				for(int i = 0;i<token1.length;i++) {
+					list1.add(token1[i]);
+				}
+				line = in.readLine();
+				String[] token2 = line.split(",");
+				List<String> list2 = new ArrayList<>();
+				for(int i = 0;i<token2.length;i++) {
+					list2.add(token2[i]);
+				}
+				line = in.readLine();
+				String[] token3 = line.split(",");
+				List<String> list3 = new ArrayList<>();
+				for(int i = 0;i<token3.length;i++) {
+					list3.add(token3[i]);
+				}
+				line = in.readLine();
+				String[] token4 = line.split(",");
+				List<String> list4 = new ArrayList<>();
+				for(int i = 0;i<token4.length;i++) {
+					list4.add(token4[i]);
+				}
 				
-				String classroom = tokens[0];
-				String name = tokens[1];
-				int day1 = Integer.parseInt(tokens[2]);
-				int time1 = Integer.parseInt(tokens[3]);
-				int due1 = Integer.parseInt(tokens[4]);
 				
+				
+				
+
 				switch(day) {
 				case 1:
-					if(time>=time1||time<=(time1+due1)) {
-						System.out.println("[有課:C003 Physical 到10時]");
+					if(time>=Integer.parseInt(list3.get(3))&&time<=(Integer.parseInt(list3.get(3))+Integer.parseInt(list3.get(4)))) {
+						System.out.println("[有課:" + list3.get(0) + list3.get(1) + "到"+(Integer.parseInt(list3.get(3))+Integer.parseInt(list3.get(4)))+"時");
 						break;
 					}else {
 						System.out.println("[有空檔]");
@@ -55,12 +77,7 @@ public class Main {
 					}
 					
 				case 2:
-					if(time>=time1||time<=(time1+due1)) {
-						System.out.println("[有課:C001 Java 到16時]");
-					}
-					else {
-						System.out.println("[有空檔]");
-					}
+					
 				
 				}
 				
