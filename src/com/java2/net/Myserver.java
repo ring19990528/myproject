@@ -28,11 +28,9 @@ public class Myserver {
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-<<<<<<< HEAD
+
 			System.out.println("Error!!");
-=======
-			
->>>>>>> chat
+
 		}
 		
 	}
