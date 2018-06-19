@@ -77,7 +77,9 @@ public class Main {
 					}
 					
 				case 2:
-					
+					if(time>=Integer.parseInt(list1.get(3))&&time <=(Integer.parseInt(list1.get(3))+Integer.parseInt(list1.get(4)))){
+						
+					}
 				
 				}
 				
