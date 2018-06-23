@@ -14,6 +14,11 @@ public class Course {
 		this.hour = hour;
 		this.duration = duration;
 	}
+	public boolean isAvailable(int weekday,int hour) {
+		this.weekday = weekday;
+		this.hour = hour;
+		return true;
+	}
 	public String getId() {
 		return id;
 	}
@@ -46,18 +51,8 @@ public class Course {
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-readCourses();
-	boolean avail = true;
-	for (Course c:courses){
-		if(!c.isAvailable(weekDay,hour)){
-			System.out.print("有客");
-			avail = false;
-			break;
-		}
+
 	}
-	if(avail){
-		System.out.println("沒空");
-	}
-	}
+	
 
 }
