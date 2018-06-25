@@ -18,11 +18,10 @@ import java.util.Scanner;
 //	請輸入時(0~24):14
 //	[有課:C004 English 到16時]
 
-
 public class Main {
 	Scanner scanner = new Scanner(System.in);
-	
-		public void study() {
+
+	public void study() {
 			int function = 0;
 			while(function!=2) {
 				showFuctions();
@@ -69,18 +68,43 @@ public class Main {
 				switch(day) {
 				case 1:
 					if(time>=Integer.parseInt(list3.get(3))&&time<=(Integer.parseInt(list3.get(3))+Integer.parseInt(list3.get(4)))) {
-						System.out.println("[有課:" + list3.get(0) + list3.get(1) + "到"+(Integer.parseInt(list3.get(3))+Integer.parseInt(list3.get(4)))+"時");
+						System.out.println("[有課:" + list3.get(0) + list3.get(1) + "到"+(Integer.parseInt(list3.get(3))+Integer.parseInt(list3.get(4)))+"時]");
 						break;
 					}else {
 						System.out.println("[有空檔]");
 						break;
 					}
 					
+				case 4:
+				
+					
+					if(time>=Integer.parseInt(list2.get(3))&&time <=(Integer.parseInt(list2.get(3))+Integer.parseInt(list2.get(4)))){
+							System.out.println("[有課:" + list2.get(0) + list2.get(1) + "到"+(Integer.parseInt(list2.get(3))+Integer.parseInt(list2.get(4)))+"時]");
+							break;
+					}
+					else {
+						if(time>=Integer.parseInt(list4.get(3))&&time <=(Integer.parseInt(list4.get(3))+Integer.parseInt(list4.get(4)))){
+							System.out.println("[有課:" + list4.get(0) + list4.get(1) + "到"+(Integer.parseInt(list4.get(3))+Integer.parseInt(list4.get(4)))+"時]");
+							break;
+					}else {
+						System.out.println("[有空檔]");
+						break;
+					}
+					}
+					
+					
+				
 				case 2:
 					if(time>=Integer.parseInt(list1.get(3))&&time <=(Integer.parseInt(list1.get(3))+Integer.parseInt(list1.get(4)))){
-						
-					}
-				
+						System.out.println("[有課:" + list1.get(0) + list1.get(1) + "到"+(Integer.parseInt(list1.get(3))+Integer.parseInt(list1.get(4)))+"時]");
+						break;
+				}else {
+					System.out.println("[有空檔]");
+					break;
+				}
+					default:
+						System.out.println("[有空檔]");
+						break;
 				}
 				
 			}
@@ -96,16 +120,19 @@ public class Main {
 		}
 		}
 		}
-		public static void main(String[] args) {
-			Main main = new Main();
-			main.study();
-			
+
+	public static void main(String[] args) {
+		Main main = new Main();
+		main.study();
+
 	}
-		public void showFuctions() {
-			System.out.println("請輸入功能(1or2)");
-			System.out.println("1)查詢空檔時間");
-			System.out.println("2)結束程式");
-		}
+
+	public void showFuctions() {
+		System.out.println("請輸入功能(1or2)");
+		System.out.println("1)查詢空檔時間");
+		System.out.println("2)結束程式");
+	}
+
 	public void question() {
 		System.out.println("請輸入星期(1~7):");
 		int day = scanner.nextInt();

@@ -15,8 +15,7 @@ public class Course {
 		this.duration = duration;
 	}
 	public boolean isAvailable(int weekday,int hour) {
-		this.weekday = weekday;
-		this.hour = hour;
+		
 		return true;
 	}
 	public String getId() {
